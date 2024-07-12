@@ -14,16 +14,16 @@
 				return -Infinity;
 			}
 			let sortedArr = arr.sort((a,b)=>b-a);
-			console.log(sortedArr)
+			// console.log(sortedArr)
 			return sortedArr[1];
 		}
 
 		function Main() {
-			// var n = prompt("Enter the number of elements");
-			var arr = [-1, -2, -3, -4, -5];
-			// for (var i = 0; i < n; i++) {
-			// 	arr[i] = prompt("Enter element " + (i+1));
-			// }
+			var n = prompt("Enter the number of elements");
+			var arr =[];// [-1, -2, -3, -4, -5];
+			for (var i = 0; i < n; i++) {
+				arr[i] = prompt("Enter element " + (i+1));
+			}
 			alert(secondHighest(arr));
 		}
 		Main();
