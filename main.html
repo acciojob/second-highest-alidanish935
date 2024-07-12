@@ -10,6 +10,9 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			if(arr.length()<2){
+				return Number.MIN_VALUE;
+			}
 			let sortedArr = arr.sort();
 			return sortedArr[1];
 		}
