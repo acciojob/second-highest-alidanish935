@@ -13,14 +13,31 @@
 			if(arr.length<2){
 				return -Infinity;
 			}
-			let sortedArr = arr.sort((a,b)=>b-a);
-			// console.log(sortedArr)
-			return sortedArr[1];
+			// let ans = -Infinity;
+			let max = -Infinity//Number.MIN_VALUE;
+			let secmax = -Infinity//Number.MIN_VALUE;
+			for(let i=0;i<arr.length;i++){
+				if(arr[i]>max){
+					secmax=max;
+					max=arr[i];
+				}
+				if(arr[i]<max && arr[i]>secmax){
+					secmax=arr[i];
+				}
+				
+			console.log('max', max)
+			}
+			// if(secmax ==Number.MIN_VALUE ){
+			// 	return -Infinity;
+			// }
+			console.log('secmax', secmax)
+			return secmax;
 		}
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
-			var arr =[];// [-1, -2, -3, -4, -5];
+			var arr = []// [1, 1, 1, 1, 1];
+			
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
